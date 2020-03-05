@@ -1,0 +1,44 @@
+<mat-card>
+    <mat-card-title>
+        Select
+    </mat-card-title>
+    <!-- <mat-card-subtitle>Subtitle</mat-card-subtitle> -->
+    <mat-card-content>
+
+        <section>
+            <p>Select the fields you need:</p>
+            <section>
+                <mat-checkbox [(ngModel)]="showName" name="showName">Name</mat-checkbox>
+                <mat-checkbox [(ngModel)]="showAddress" name="showAddress">Address</mat-checkbox>
+                <mat-checkbox [(ngModel)]="showPhone" name="showPhone">Phone</mat-checkbox>
+                <mat-checkbox [(ngModel)]="showAge" name="showAge">Age</mat-checkbox>
+            </section>
+        </section>
+
+        <br><br>
+
+        <section>
+            <mat-card-footer *ngIf="showName">
+                <input matInput placeholder="Name">
+            </mat-card-footer>
+            <mat-card-footer *ngIf="showAddress">
+                <input matInput placeholder="Address">
+            </mat-card-footer>
+            <mat-card-footer *ngIf="showPhone">
+                <input matInput placeholder="Phone">
+            </mat-card-footer>
+            <mat-card-footer *ngIf="showAge">
+                <input matInput placeholder="Age" type="number">
+            </mat-card-footer>
+        </section>
+    </mat-card-content>
+
+        <mat-card-footer>
+                <app-sub-ng-if 
+                    *ngIf="showName && 
+                            showAddress &&
+                            showAge &&
+                            showPhone">
+                </app-sub-ng-if>
+        </mat-card-footer>
+</mat-card>

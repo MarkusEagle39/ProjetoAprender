@@ -1,0 +1,27 @@
+<mat-card class="mycard">
+    <mat-card-header>
+        <mat-card-title>Person data</mat-card-title>
+    <mat-card-subtitle></mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <p> {{preson.firstname }}</p>
+        <p> {{preson.lastname}}</p>
+        <p> {{preson.age}}</p>
+        <p> {{preson.address}}</p>
+        <form >
+            <mat-form-field class="example-full-width">
+              <mat-label>Favorite food</mat-label>
+              <input matInput placeholder="Name" value="Sushi">
+            </mat-form-field>
+          
+            <mat-form-field class="example-full-width">
+              <mat-label>Leave a comment</mat-label>
+              <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+            </mat-form-field>
+        </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
